@@ -3,5 +3,14 @@
 # screen dimesions
 HEIGHT, WIDTH = 950, 750
 
+#colors menu
+BACKGROUND_COLOR = "#090909"
+COLOR_BLUE = "#0001ff"
+COLOR_YELLOW = "#fffc00"
+COLOR_RED = "#ff0000"
+
+COLOR_BLUE_HOVER = "#00edff"
+COLOR_YELLOW_HOVER = "#00ff00"
+COLOR_RED_HOVER = "#ff00f5"
 
 
