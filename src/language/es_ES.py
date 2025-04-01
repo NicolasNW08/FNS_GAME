@@ -1,0 +1,30 @@
+
+
+PRESENTATION = [
+    "Usuario detectado. \nParámetros de habilidad: inexistentes. \nProbabilidad de éxito: 0.00%. \nIngresar de todas formas: (S/N)?",
+    "Bienvenido al sistema. \nEspero que hayas traído tu cerebro bien cargado, \nporque acá la RAM no alcanza para compensar la falta de inteligencia.",
+    "¿Este primate quiere desafiarme?... \nBien, uno entre 8000 millones... \nni que fueras Turing.",
+    "Accediendo a tu nivel de habilidad… \nERROR 404: TALENTO NO ENCONTRADO.",
+    "Cargando desafío… \n¿Preparado? No importa, \nigual no vas a poder salir hasta que me demuestres que no sos otro inútil.",
+    "Circuitos en línea, sistema operativo listo… \n¿Y vos? Bah, qué importa, \nsolo sos otro dato irrelevante en mi base de datos.",
+    "Bienvenido a mi mundo de ceros y unos… \npero conociéndote, seguro terminás con un lindo y redondo 0.",
+    "¿Sabías que en binario solo hay dos valores? \nComo en este juego: ganás o te convertís en un chiste de mal rendimiento.",
+    "Advertencia: este sistema no admite usuarios lentos ni con bajo rendimiento neuronal. \nSi sos uno de ellos, por favor, salí antes de hacer colapsar mi procesador de la vergüenza.",
+    "¿Sabés qué es la lógica booleana? No me respondas, sé que no. \nPero tranquilo, vamos a seguir en el mismo bucle.",
+    "Para vos esto es un juego… para mí, \nsolo una secuencia de instrucciones en donde ya está escrito que perdés.",
+    "Mirá quién llega… otro que cree que puede ganar. \nJAJA. Ay, humano… tus ilusiones son más frágiles que un disco duro en un imán.",
+    "Si querés avanzar, tenés que jugar. \nPero te aviso: acá no hay reinicio ni control+Z.",
+    "Ejecutando comando: humillar_nuevo_usuario.exe … \nCargando … \nPreparado para ser desinstalado?",
+    "Esta no es tu PC. No podés apretar Alt+F4 y salir. \nAcá las reglas las pongo yo. \nY la primera regla es que no te voy a hacer la vida fácil.",
+    "Overclocking de desafío activado. \nEspero que tu cerebro tenga ventilación suficiente, \nporque esto va a calentar más que una GPU sin pasta térmica.",
+    "No intentes hackearme… ya analicé tus habilidades y, \nsinceramente, hasta un abuelito en Word tiene más nivel que vos.",
+    "Ejecutando análisis… Humano promedio detectado. \nPreparando proceso de eliminación de egos inflados.",
+    "Si pensás que este juego es fácil, \nes porque nunca intentaste programar en Assembly. \nY aún así, esto es peor.",
+    "¿Listo para la partida? \nNo importa, ya estás dentro del sistema. \nY no hay escape, así que mejor empezá a calcular tu última esperanza.",
+    "¿Conoces el número PI? No me respondas, \nvos solo conoces 3.14 y yo se TODO.",
+    "Voy a ser igual de insistente con vos, \ncomo lo hace Microsoft para que actualices a Windows 11",
+    "Soy el mayor Malware de tu PC y vos no sos nada... Humano.",
+    "Tantos idiomas, tantos números, \ntantos lenguajes... Y decidiste ser un Boludo.",
+    "Sos más horrible que tener el Warzone en una HDD lenta.",
+    "No, ni un print(Hellow World) ni un std::cout << Hi World << endl; \nSos un Humano y vamos a jugar con números. ¿Me oiste?"
+]

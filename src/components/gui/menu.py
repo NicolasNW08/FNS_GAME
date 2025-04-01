@@ -1,15 +1,15 @@
 from tkinter import ttk, WORD
 import customtkinter as ctk
 from PIL import Image, ImageTk
-from assets.animation.dialogue_animation import DialogueAnimator
-import assets.constant.constants as constants
-from assets.font.fonts import *
+from src.assets.animation.dialogue_animation import DialogueAnimator
+import src.assets.constant.constants as constants
+from src.assets.font.fonts import *
 
-from assets.animation.pc_menu_animation import PC_MENUAnimation
-from assets.animation.title_animation import TITLEAnimation
-from assets.animation.bg_animation import BGAnimation
+from src.assets.animation.pc_menu_animation import PC_MENUAnimation
+from src.assets.animation.title_animation import TITLEAnimation
+from src.assets.animation.bg_animation import BGAnimation
 
-from language.es_ES import *
+from src.language.es_ES import *
 
 
 class Menu(ctk.CTkFrame):

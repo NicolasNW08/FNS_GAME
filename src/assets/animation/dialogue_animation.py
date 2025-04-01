@@ -1,6 +1,6 @@
 import random
 import tkinter as tk
-from language.es_ES import PRESENTATION
+from src.language.es_ES import PRESENTATION
 
 class DialogueAnimator:
     def __init__(self, parent, dialogue_widget):

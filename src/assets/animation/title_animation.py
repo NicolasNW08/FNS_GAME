@@ -1,6 +1,6 @@
 import tkinter as tk
 from PIL import Image
-import assets.constant.constants as constants
+
 from customtkinter import CTkImage
 
 class TITLEAnimation:
@@ -12,7 +12,7 @@ class TITLEAnimation:
 
         # Cargar los 3 frames
         for i in range(1, 4):
-            img = Image.open(f"assets/img/securities/title{i}.png")
+            img = Image.open(f"src/assets/img/securities/title{i}.png")
             img = img.resize((710, 120))  # Ajustar tamaño
             self.frames.append(CTkImage(light_image=img, size=(710, 120)))  # Convertir a formato de CTk
 

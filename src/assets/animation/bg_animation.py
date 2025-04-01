@@ -1,6 +1,6 @@
 import tkinter as tk
 from PIL import Image
-import assets.constant.constants as constants
+import src.assets.constant.constants as constants
 from customtkinter import CTkImage
 
 class BGAnimation:
@@ -12,7 +12,7 @@ class BGAnimation:
 
         # Cargar los 5 frames
         for i in range(1, 6):
-            img = Image.open(f"assets/img/backgrounds/background{i}.png")
+            img = Image.open(f"src/assets/img/backgrounds/background{i}.png")
             img = img.resize((constants.WIDTH, constants.HEIGHT))  # Ajustar tamaño
             self.frames.append(CTkImage(light_image=img, size=(constants.WIDTH, constants.HEIGHT)))  # Convertir a formato de CTk
 

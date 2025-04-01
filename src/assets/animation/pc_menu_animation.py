@@ -1,6 +1,6 @@
 import tkinter as tk
 from PIL import Image
-import assets.constant.constants as constants
+import src.assets.constant.constants as constants
 from customtkinter import CTkImage
 import random
 
@@ -13,7 +13,7 @@ class PC_MENUAnimation:
 
         # Cargar los 6 frames
         for i in range(1, 7):
-            img = Image.open(f"assets/img/PC/pc{i}.png")
+            img = Image.open(f"src/assets/img/PC/pc{i}.png")
             img = img.resize((175, 163))  # Ajustar tamaño
             self.frames.append(CTkImage(light_image=img, size=(175*3.2, 163*3.2)))   # Convertir a formato de CTk
 

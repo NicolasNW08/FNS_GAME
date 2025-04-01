@@ -5,9 +5,9 @@ import customtkinter as ctk
 from customtkinter import CTkFont
 
 # Rutas de las fuentes
-LOWERCASE_PATH = "assets/font/upheavtt.ttf"
-UPPERCASE_PATH = "assets/font/PixelifySans-VariableFont_wght.ttf"
-ALTERNATIVE_PATH = "assets/font/niideache.ttf"
+LOWERCASE_PATH = "src/assets/font/upheavtt.ttf"
+UPPERCASE_PATH = "src/assets/font/PixelifySans-VariableFont_wght.ttf"
+ALTERNATIVE_PATH = "src/assets/font/niideache.ttf"
 
 # Registrar las fuentes en Tkinter
 def register_font(font_path):
