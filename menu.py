@@ -1,11 +1,9 @@
-from tkinter import *
-from tkinter import ttk
+from tkinter import ttk, WORD
 import customtkinter as ctk
 from PIL import Image, ImageTk
 from assets.animation.dialogue_animation import DialogueAnimator
 import assets.constant.constants as constants
 from assets.font.fonts import *
-import random
 
 from assets.animation.pc_menu_animation import PC_MENUAnimation
 from assets.animation.title_animation import TITLEAnimation
@@ -14,23 +12,18 @@ from assets.animation.bg_animation import BGAnimation
 from language.es_ES import *
 
 
-class gui_menu(ctk.CTk):
-    def __init__(self, *args, **kwargs):
-        ctk.CTk.__init__(self)
-        self.title("F*king Numbers")
-        self.iconbitmap("assets/img/icon.ico")
-        self.geometry("{}x{}+{}+{}".format(
-        constants.WIDTH, constants.HEIGHT,
-        int((self.winfo_screenwidth() - constants.WIDTH) / 2),
-        int((self.winfo_screenheight() - constants.HEIGHT) / 2-30)
-        ))
-        self.resizable(False, False)
-        
+class Menu(ctk.CTkFrame):
+    def __init__(self, parent, controller):
+        super().__init__(parent)
+        self.pack()
+        self.place(x=0,y=0, relwidth=1, relheight=1)
+        self.controller = controller
+        self.configure(bg_color=constants.BACKGROUND_COLOR, 
+                        fg_color=constants.BACKGROUND_COLOR,
+                        border_color="white", border_width=2)
+
         self.widgets()
 
-
-        self.mainloop()
-        
     
     def widgets(self):
         # Background -------------------------------------------------------------
@@ -72,7 +65,8 @@ class gui_menu(ctk.CTk):
         self.start_button = ctk.CTkButton(self, text="Jugar", font=get_TITLE(54),
                                         border_width=5, corner_radius=1, border_color="white",
                                         fg_color=constants.BACKGROUND_COLOR, text_color="white",
-                                        hover_color=constants.COLOR_BLUE_HOVER)
+                                        hover_color=constants.COLOR_BLUE_HOVER,
+                                        command=lambda: self.controller.show_frame("Levels"))
         self.start_button.place(x=constants.WIDTH/2, y=constants.HEIGHT/2+300, anchor="center")
         
         self.option_button = ctk.CTkButton(self, text="Opciones", font=get_TITLE(40),
