@@ -78,5 +78,6 @@ class Menu(ctk.CTkFrame):
         self.exit_button = ctk.CTkButton(self, text="Salir", font=get_TITLE(40),
                                         border_width=5, corner_radius=1, border_color="white",
                                         fg_color=constants.BACKGROUND_COLOR, text_color="white",
-                                        hover_color=constants.COLOR_RED_HOVER) 
+                                        hover_color=constants.COLOR_RED_HOVER,
+                                        command=lambda: self.controller.destroy()) 
         self.exit_button.place(x=constants.WIDTH/2, y=constants.HEIGHT/2+430, anchor="center")

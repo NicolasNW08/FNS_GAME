@@ -7,7 +7,7 @@ class App(ctk.CTk):
     
     def __init__(self, frame_initial, *args, **kwargs, ):
         super().__init__(*args, **kwargs)
-
+        
         self.title("F*king Numbers")
         self.iconbitmap("src/assets/img/icon.ico")
         self.geometry("{}x{}+{}+{}".format(
@@ -18,7 +18,6 @@ class App(ctk.CTk):
         self.resizable(False, False)
         
         
-
         container = ctk.CTkFrame(self)
         container.pack(side="top", fill="both", expand=True)
 

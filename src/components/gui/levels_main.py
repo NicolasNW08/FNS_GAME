@@ -4,8 +4,15 @@ from PIL import Image
 from src.assets.constant import constants
 from src.assets.font.fonts import *
 
+from src.components.gui.levels_selector.levels_levels import Levels
+from src.components.gui.levels_selector.levels_free import Free
+from src.components.gui.levels_selector.levels_versus import Versus
+from src.components.gui.levels_selector.levels_others import Others
 
-class Levels(ctk.CTkFrame):
+
+
+
+class Levels_main(ctk.CTkFrame):
     def __init__(self, parent, controller):
         super().__init__(parent)
         self.place(x=0,y=0, relwidth=1, relheight=1)
@@ -16,6 +23,40 @@ class Levels(ctk.CTkFrame):
         self.controller = controller
         self.widgets()
         
+        self.frames = {}
+        self.buttons = {}
+        
+        for i in (Levels, Free, Versus, Others):
+            frame = i(self, self)
+            self.frames[i] = frame
+            frame.pack()
+            frame.place(x=0,y=0, relwidth=1, relheight=1)
+            frame.configure(bg_color=constants.BACKGROUND_COLOR, 
+                    fg_color=constants.BACKGROUND_COLOR,
+                    border_color="white", border_width=2)
+            frame.lower()
+            
+        #self.show_frame_levels(Versus)
+        
+    def show_frame_levels(self, container):
+        frame = self.frames[container]
+        frame.tkraise()
+        
+    
+    def back_to_main_levels(self):
+        # Enviar todos los frames de niveles al fondo
+        for frame in self.frames.values():
+            frame.lower()
+        
+        # Asegurar que los widgets principales estén visibles (botones de selección)
+        self.levels_button.lift()
+        self.free_button.lift()
+        self.versus_button.lift()
+        self.other_button.lift()
+        self.back_button.lift()
+        
+        # Asegurar que el frame principal esté visible
+        self.tkraise()
         
     def widgets(self):
         
@@ -37,7 +78,8 @@ class Levels(ctk.CTkFrame):
                                     hover_color=constants.COLOR_BLUE,
                                     border_color="white", border_width=2,
                                     width=300, height=50,
-                                    image=levels_image, compound="top")
+                                    image=levels_image, compound="top",
+                                    command=lambda: self.show_frame_levels(Levels))
         self.levels_button.place(x=constants.WIDTH/2-175, y=constants.HEIGHT/2-180, anchor="center")
         
         
@@ -50,7 +92,8 @@ class Levels(ctk.CTkFrame):
                                     hover_color=constants.COLOR_BLUE,
                                     border_color="white", border_width=2,
                                     width=300, height=50,
-                                    image=free_image, compound="top")
+                                    image=free_image, compound="top",
+                                    command=lambda: self.show_frame_levels(Free))
         self.free_button.place(x=constants.WIDTH/2+175, y=constants.HEIGHT/2-180, anchor="center")
         
         versus_image = Image.open("src/assets/img/versus.png")
@@ -62,7 +105,8 @@ class Levels(ctk.CTkFrame):
                                     hover_color=constants.COLOR_BLUE,
                                     border_color="white", border_width=2,
                                     width=300, height=50,
-                                    image=versus_image, compound="top")
+                                    image=versus_image, compound="top",
+                                    command=lambda: self.show_frame_levels(Versus))
         self.versus_button.place(x=constants.WIDTH/2-175, y=constants.HEIGHT/2+130, anchor="center")
         
         
@@ -75,7 +119,8 @@ class Levels(ctk.CTkFrame):
                                     hover_color=constants.COLOR_BLUE,
                                     border_color="white", border_width=2,
                                     width=300, height=50,
-                                    image=other_image, compound="top")
+                                    image=other_image, compound="top",
+                                    command=lambda: self.show_frame_levels(Others))
         self.other_button.place(x=constants.WIDTH/2+175, y=constants.HEIGHT/2+130, anchor="center")
         
         self.back_button = ctk.CTkButton(self, text="ATRÁS",
@@ -86,3 +131,5 @@ class Levels(ctk.CTkFrame):
                                     width=300, height=50,
                                     command=lambda: self.controller.show_frame("Menu"))
         self.back_button.place(x=constants.WIDTH/2, y=constants.HEIGHT/2+380, anchor="center")
+
+

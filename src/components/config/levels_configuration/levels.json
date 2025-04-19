@@ -1,0 +1,9 @@
+[
+    {"level": 1, "name": "asd1", "dificulty": 1, "min": 1, "max": 125, "attempts": 4, "finalized": true},
+    {"level": 2, "name": "asd2", "dificulty": 2, "min": 1, "max": 650, "attempts": 6, "finalized": false},
+    {"level": 3, "name": "asd3", "dificulty": 3, "min": 1, "max": 50, "attempts": 7, "finalized": false},
+    {"level": 4, "name": "asd3", "dificulty": 4, "min": 1, "max": 100, "attempts": 8, "finalized": false},
+    {"level": 5, "name": "asd4", "dificulty": 5, "min": 1, "max": 200, "attempts": 9, "finalized": false},
+    {"level": 6, "name": "asd4", "dificulty": 6, "min": 1, "max": 300, "attempts": 10, "finalized": false},
+    {"level": 7, "name": "asd4", "dificulty": 7, "min": 1, "max": 400, "attempts": 11, "finalized": false}
+]
