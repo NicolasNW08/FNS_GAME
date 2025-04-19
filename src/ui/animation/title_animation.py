@@ -9,6 +9,8 @@ class TITLEAnimation:
         self.title = label
         self.frames = []  # Lista para almacenar los frames
         self.index = 0  # Índice del frame actual
+        self.running = False
+        self.after_id = None
 
         # Cargar los 3 frames
         for i in range(1, 4):
@@ -17,10 +19,23 @@ class TITLEAnimation:
             self.frames.append(CTkImage(light_image=img, size=(710, 120)))  # Convertir a formato de CTk
 
         # Iniciar la animación
-        self.animate()
+        self.resume()
 
     def animate(self):
+        if not self.running:
+            return
         # Cambiar la imagen del fondo
         self.title.configure(image=self.frames[self.index], text="")    
         self.index = (self.index + 1) % len(self.frames)  # Ir al siguiente frame en loop
         self.parent.after(300, self.animate)  # Volver a llamar en 500ms
+        
+    def pause(self):
+        self.running = False
+        if self.after_id:
+            self.parent.after_cancel(self.after_id)
+            self.after_id = None
+
+    def resume(self):
+        if not self.running:
+            self.running = True
+            self.animate()

@@ -41,6 +41,7 @@ class Levels_main(ctk.CTkFrame):
         frame = self.frames[container]
         frame.tkraise()
         
+
     
     def back_to_main_levels(self):
         # Enviar todos los frames de niveles al fondo
@@ -128,7 +129,8 @@ class Levels_main(ctk.CTkFrame):
                                     hover_color=constants.COLOR_BLUE,
                                     border_color="white", border_width=2,
                                     width=300, height=50,
-                                    command=lambda: self.controller.show_frame("Menu"))
+                                    command=lambda: [self.controller.frames["Menu"].resume_animations(), 
+                                                    self.controller.show_frame("Menu")])
         self.back_button.place(x=constants.WIDTH/2, y=constants.HEIGHT/2+380, anchor="center")
 
 

@@ -24,6 +24,19 @@ class Menu(ctk.CTkFrame):
 
         self.widgets()
 
+    def resume_animations(self):
+        self.bg_animation.resume()
+        self.title_animation.resume()
+        self.pc_menu_animation.resume()
+        self.dialogue_animation.resume()
+        
+
+    def pause_animations(self):
+        self.bg_animation.pause()
+        self.title_animation.pause()
+        self.pc_menu_animation.pause()
+        self.dialogue_animation.pause()
+
     
     def widgets(self):
         # Background -------------------------------------------------------------
@@ -66,7 +79,7 @@ class Menu(ctk.CTkFrame):
                                         border_width=5, corner_radius=1, border_color="white",
                                         fg_color=constants.BACKGROUND_COLOR, text_color="white",
                                         hover_color=constants.COLOR_BLUE_HOVER,
-                                        command=lambda: self.controller.show_frame("Levels"))
+                                        command=lambda: [self.pause_animations(), self.controller.show_frame("Levels")])
         self.start_button.place(x=constants.WIDTH/2, y=constants.HEIGHT/2+300, anchor="center")
         
         self.option_button = ctk.CTkButton(self, text="Opciones", font=get_TITLE(40),
